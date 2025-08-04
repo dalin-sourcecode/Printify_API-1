@@ -1,0 +1,124 @@
+#####################################################################################
+from ESSENTIAL_values import (
+    id_SHOP,
+    API_KEY,
+    COOKIE,
+    id_variant_SIMPLE_PRODUCT,
+    id_SIMPLE_SQUARE_PRODUCT,
+    id_SIMPLE_HORIZONTAL_PRODUCT,
+    id_SIMPLE_VERTICAL_PRODUCT,
+    id_SPECIFIC_HORIZONTAL_PRODUCT,
+    id_variant_SPECIFIC_HORIZONTAL_PRODUCT1,
+    id_variant_SPECIFIC_HORIZONTAL_PRODUCT2,
+    id_SPECIFIC_VERTICAL_PRODUCT,
+    id_variant_SPECIFIC_VERTICAL_PRODUCT1,
+    id_variant_SPECIFIC_VERTICAL_PRODUCT2,
+    id_SPECIFIC_SQUARE_upto4_images_PRODUCT,
+    id_variant_SPECIFIC_SQUARE_upto4_images_PRODUCT1,
+    id_SPECIFIC_HORIZONTAL_upto4_images_PRODUCT,
+    id_variant_SPECIFIC_HORIZONTAL_upto4_images_PRODUCT1,
+    id_SPECIFIC_VERTICAL_upto4_images_PRODUCT,
+    id_variant_SPECIFIC_VERTICAL_upto4_images_PRODUCT1,
+    id_SIMPLE_TSHIRT_AOP,
+    id_variant_SIMPLE_TSHIRT_AOP,
+    variant_SIMPLE_TSHIRT_AOP,
+    id_blueprint_SIMPLE_TSHIRT_AOP,
+    id_print_provider,
+    COPY_STARTSWITH_0,
+    UPLOAD_STARTSWITH,
+    PAGINATION_0,
+    IMAGE_VERSION_0,
+    PRODUCT_TITLE_0,
+    PRODUCT_TITLE_SUFFIX_0,
+    HEAVY_TEE_VERSION_STARTSWITH
+)
+
+from METHOD_class import PRODUCT_SIMPLE, PRODUCT_SPECIFIC, PRODUCT_TSHIRT_AOP
+
+#####################################################################################
+
+INSTANCES = {
+    "simple_HZ": lambda: PRODUCT_SIMPLE(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SIMPLE_HORIZONTAL_PRODUCT,
+        id_variant_SIMPLE_PRODUCT
+    ),
+    "simple_HZ_max4": lambda: PRODUCT_SPECIFIC(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SPECIFIC_HORIZONTAL_upto4_images_PRODUCT,
+        id_variant_SPECIFIC_HORIZONTAL_upto4_images_PRODUCT1,
+        ""
+    ),
+    "simple_SQ": lambda: PRODUCT_SIMPLE(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SIMPLE_SQUARE_PRODUCT,
+        id_variant_SIMPLE_PRODUCT
+    ),
+    "simple_SQ_max4": lambda: PRODUCT_SPECIFIC(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SPECIFIC_SQUARE_upto4_images_PRODUCT,
+        id_variant_SPECIFIC_SQUARE_upto4_images_PRODUCT1,
+        ""
+    ),
+    "simple_VT": lambda: PRODUCT_SIMPLE(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SIMPLE_VERTICAL_PRODUCT,
+        id_variant_SIMPLE_PRODUCT
+    ),
+    "simple_VT_max9": lambda: PRODUCT_SPECIFIC(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SPECIFIC_VERTICAL_upto4_images_PRODUCT,
+        id_variant_SPECIFIC_VERTICAL_upto4_images_PRODUCT1,
+        ""
+    ),
+    "specific_HZ": lambda: PRODUCT_SPECIFIC(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SPECIFIC_HORIZONTAL_PRODUCT,
+        id_variant_SPECIFIC_HORIZONTAL_PRODUCT1,
+        id_variant_SPECIFIC_HORIZONTAL_PRODUCT2
+    ),
+    "specific_VT": lambda: PRODUCT_SPECIFIC(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        IMAGE_VERSION_0, PAGINATION_0,
+        COPY_STARTSWITH_0, UPLOAD_STARTSWITH,
+        id_SPECIFIC_VERTICAL_PRODUCT,
+        id_variant_SPECIFIC_VERTICAL_PRODUCT1,
+        id_variant_SPECIFIC_VERTICAL_PRODUCT2
+    ),
+    "simple_TAOP": lambda: PRODUCT_TSHIRT_AOP(
+        id_SHOP, API_KEY, COOKIE,
+        PRODUCT_TITLE_0, PRODUCT_TITLE_SUFFIX_0,
+        id_blueprint_SIMPLE_TSHIRT_AOP,
+        id_print_provider, IMAGE_VERSION_0,
+        PAGINATION_0, COPY_STARTSWITH_0,
+        UPLOAD_STARTSWITH, id_SIMPLE_TSHIRT_AOP,
+        id_variant_SIMPLE_TSHIRT_AOP,
+        variant_SIMPLE_TSHIRT_AOP
+    )
+}
+
+
+
+
